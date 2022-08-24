@@ -20,7 +20,7 @@ class ToBinary extends Operation {
     constructor() {
         super();
 
-        this.name = "To Binary";
+        this.name = "文本转二进制";
         this.module = "Default";
         this.description = "Displays the input data as a binary string.<br><br>e.g. <code>Hi</code> becomes <code>01001000 01101001</code>";
         this.infoURL = "https://wikipedia.org/wiki/Binary_code";

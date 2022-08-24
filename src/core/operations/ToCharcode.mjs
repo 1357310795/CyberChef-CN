@@ -21,7 +21,7 @@ class ToCharcode extends Operation {
     constructor() {
         super();
 
-        this.name = "To Charcode";
+        this.name = "文本转 Unicode";
         this.module = "Default";
         this.description = "Converts text to its unicode character code equivalent.<br><br>e.g. <code>Γειά σου</code> becomes <code>0393 03b5 03b9 03ac 20 03c3 03bf 03c5</code>";
         this.infoURL = "https://wikipedia.org/wiki/Plane_(Unicode)";

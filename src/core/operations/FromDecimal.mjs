@@ -19,7 +19,7 @@ class FromDecimal extends Operation {
     constructor() {
         super();
 
-        this.name = "From Decimal";
+        this.name = "ASCII 码转文本";
         this.module = "Default";
         this.description = "Converts the data from an ordinal integer array back into its raw form.<br><br>e.g. <code>72 101 108 108 111</code> becomes <code>Hello</code>";
         this.inputType = "string";

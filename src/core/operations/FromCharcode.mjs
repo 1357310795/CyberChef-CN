@@ -21,7 +21,7 @@ class FromCharcode extends Operation {
     constructor() {
         super();
 
-        this.name = "From Charcode";
+        this.name = "Unicode 转文本";
         this.module = "Default";
         this.description = "Converts unicode character codes back into text.<br><br>e.g. <code>0393 03b5 03b9 03ac 20 03c3 03bf 03c5</code> becomes <code>Γειά σου</code>";
         this.infoURL = "https://wikipedia.org/wiki/Plane_(Unicode)";

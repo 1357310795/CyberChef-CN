@@ -20,7 +20,7 @@ class ToDecimal extends Operation {
     constructor() {
         super();
 
-        this.name = "To Decimal";
+        this.name = "文本转 ASCII 码";
         this.module = "Default";
         this.description = "Converts the input data to an ordinal integer array.<br><br>e.g. <code>Hello</code> becomes <code>72 101 108 108 111</code>";
         this.inputType = "ArrayBuffer";
