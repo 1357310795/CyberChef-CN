@@ -7,7 +7,7 @@
 import Operation from "../Operation.mjs";
 import BigNumber from "bignumber.js";
 import Utils from "../Utils.mjs";
-import {toHexFast} from "../lib/Hex.mjs";
+import { toHexFast } from "../lib/Hex.mjs";
 
 /**
  * To Base62 operation
@@ -20,19 +20,17 @@ class ToBase62 extends Operation {
     constructor() {
         super();
 
-        this.name = "To Base62";
+        this.name = "文本转 Base62";
         this.module = "Default";
         this.description = "Base62 is a notation for encoding arbitrary byte data using a restricted set of symbols that can be conveniently used by humans and processed by computers. The high number base results in shorter strings than with the decimal or hexadecimal system.";
         this.infoURL = "https://wikipedia.org/wiki/List_of_numeral_systems";
         this.inputType = "ArrayBuffer";
         this.outputType = "string";
-        this.args = [
-            {
-                name: "Alphabet",
-                type: "string",
-                value: "0-9A-Za-z"
-            }
-        ];
+        this.args = [{
+            name: "Alphabet",
+            type: "string",
+            value: "0-9A-Za-z"
+        }];
     }
 
     /**

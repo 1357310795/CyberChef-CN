@@ -7,7 +7,7 @@
 import Operation from "../Operation.mjs";
 import Utils from "../Utils.mjs";
 import OperationError from "../errors/OperationError.mjs";
-import {ALPHABET_OPTIONS} from "../lib/Base58.mjs";
+import { ALPHABET_OPTIONS } from "../lib/Base58.mjs";
 
 /**
  * To Base58 operation
@@ -20,19 +20,17 @@ class ToBase58 extends Operation {
     constructor() {
         super();
 
-        this.name = "To Base58";
+        this.name = "文本转 Base58";
         this.module = "Default";
         this.description = "Base58 (similar to Base64) is a notation for encoding arbitrary byte data. It differs from Base64 by removing easily misread characters (i.e. l, I, 0 and O) to improve human readability.<br><br>This operation encodes data in an ASCII string (with an alphabet of your choosing, presets included).<br><br>e.g. <code>hello world</code> becomes <code>StV1DL6CwTryKyV</code><br><br>Base58 is commonly used in cryptocurrencies (Bitcoin, Ripple, etc).";
         this.infoURL = "https://wikipedia.org/wiki/Base58";
         this.inputType = "ArrayBuffer";
         this.outputType = "string";
-        this.args = [
-            {
-                "name": "Alphabet",
-                "type": "editableOption",
-                "value": ALPHABET_OPTIONS
-            }
-        ];
+        this.args = [{
+            "name": "Alphabet",
+            "type": "editableOption",
+            "value": ALPHABET_OPTIONS
+        }];
     }
 
     /**
@@ -47,8 +45,7 @@ class ToBase58 extends Operation {
 
         alphabet = Utils.expandAlphRange(alphabet).join("");
 
-        if (alphabet.length !== 58 ||
-            [].unique.call(alphabet).length !== 58) {
+        if (alphabet.length !== 58 || [].unique.call(alphabet).length !== 58) {
             throw new OperationError("Error: alphabet must be of length 58");
         }
 

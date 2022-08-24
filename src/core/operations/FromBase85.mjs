@@ -7,7 +7,7 @@
 import Operation from "../Operation.mjs";
 import OperationError from "../errors/OperationError.mjs";
 import Utils from "../Utils.mjs";
-import {alphabetName, ALPHABET_OPTIONS} from "../lib/Base85.mjs";
+import { alphabetName, ALPHABET_OPTIONS } from "../lib/Base85.mjs";
 
 /**
  * From Base85 operation
@@ -20,14 +20,13 @@ class FromBase85 extends Operation {
     constructor() {
         super();
 
-        this.name = "From Base85";
+        this.name = "Base85 转文本";
         this.module = "Default";
         this.description = "Base85 (also called Ascii85) is a notation for encoding arbitrary byte data. It is usually more efficient that Base64.<br><br>This operation decodes data from an ASCII string (with an alphabet of your choosing, presets included).<br><br>e.g. <code>BOu!rD]j7BEbo7</code> becomes <code>hello world</code><br><br>Base85 is commonly used in Adobe's PostScript and PDF file formats.";
         this.infoURL = "https://wikipedia.org/wiki/Ascii85";
         this.inputType = "string";
         this.outputType = "byteArray";
-        this.args = [
-            {
+        this.args = [{
                 name: "Alphabet",
                 type: "editableOption",
                 value: ALPHABET_OPTIONS
@@ -38,19 +37,16 @@ class FromBase85 extends Operation {
                 value: true
             },
         ];
-        this.checks = [
-            {
-                pattern:
-                    "^\\s*(?:<~)?" + // Optional whitespace and starting marker
-                    "[\\s!-uz]*" +   // Any amount of base85 characters and whitespace
-                    "[!-uz]{15}" +   // At least 15 continoues base85 characters without whitespace
-                    "[\\s!-uz]*" +   // Any amount of base85 characters and whitespace
-                    "(?:~>)?\\s*$",  // Optional ending marker and whitespace
+        this.checks = [{
+                pattern: "^\\s*(?:<~)?" + // Optional whitespace and starting marker
+                    "[\\s!-uz]*" + // Any amount of base85 characters and whitespace
+                    "[!-uz]{15}" + // At least 15 continoues base85 characters without whitespace
+                    "[\\s!-uz]*" + // Any amount of base85 characters and whitespace
+                    "(?:~>)?\\s*$", // Optional ending marker and whitespace
                 args: ["!-u"],
             },
             {
-                pattern:
-                    "^" +
+                pattern: "^" +
                     "[\\s0-9a-zA-Z.\\-:+=^!/*?&<>()[\\]{}@%$#]*" +
                     "[0-9a-zA-Z.\\-:+=^!/*?&<>()[\\]{}@%$#]{15}" + // At least 15 continoues base85 characters without whitespace
                     "[\\s0-9a-zA-Z.\\-:+=^!/*?&<>()[\\]{}@%$#]*" +
@@ -58,8 +54,7 @@ class FromBase85 extends Operation {
                 args: ["0-9a-zA-Z.\\-:+=^!/*?&<>()[]{}@%$#"],
             },
             {
-                pattern:
-                    "^" +
+                pattern: "^" +
                     "[\\s0-9A-Za-z!#$%&()*+\\-;<=>?@^_`{|}~]*" +
                     "[0-9A-Za-z!#$%&()*+\\-;<=>?@^_`{|}~]{15}" + // At least 15 continoues base85 characters without whitespace
                     "[\\s0-9A-Za-z!#$%&()*+\\-;<=>?@^_`{|}~]*" +
@@ -80,8 +75,7 @@ class FromBase85 extends Operation {
             removeNonAlphChars = args[1],
             result = [];
 
-        if (alphabet.length !== 85 ||
-            [].unique.call(alphabet).length !== 85) {
+        if (alphabet.length !== 85 || [].unique.call(alphabet).length !== 85) {
             throw new OperationError("Alphabet must be of length 85");
         }
 
