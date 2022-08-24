@@ -127,7 +127,7 @@ TestRegister.addTests([
         expectedOutput: "thisisthetestsentence",
         recipeConfig: [
             {
-                op: "A1Z26 Cipher Decode",
+                op: "A1Z26 Cipher 解码",
                 args: ["Space"]
             }
         ],
