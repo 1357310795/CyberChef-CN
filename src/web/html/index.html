@@ -450,24 +450,24 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Load recipe</h5>
+                    <h5 class="modal-title">加载配方</h5>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
                         <label for="load-name" class="bmd-label-floating">配方名称</label>
                         <select class="form-control" id="load-name"></select>
-                        <span class="bmd-help">Load your recipe from local storage by selecting its name from the drop-down</span>
+                        <span class="bmd-help">通过从下拉菜单中选择配方名称，从本地存储中加载你的配方</span>
                     </div>
                     <div class="form-group">
-                        <label for="load-text" class="bmd-label-floating">配方</label>
+                        <label for="load-text" class="bmd-label-floating">配方文本</label>
                         <textarea class="form-control" id="load-text" rows="5"></textarea>
-                        <span class="bmd-help">Load your recipe by pasting it into this box</span>
+                        <span class="bmd-help">将您的配方粘贴到此框中，以加载您的配方</span>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="load-button" data-dismiss="modal">Load</button>
-                    <button type="button" class="btn btn-danger" id="load-delete-button">Delete</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="load-button" data-dismiss="modal">加载</button>
+                    <button type="button" class="btn btn-danger" id="load-delete-button">删除</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
                 </div>
             </div>
         </div>
@@ -477,43 +477,43 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Options</h5>
+                    <h5 class="modal-title">选项</h5>
                 </div>
                 <div class="modal-body" id="options-body">
-                    <p style="font-weight: bold">Please note that these options will persist between sessions.</p>
+                    <p style="font-weight: bold">请注意，这些选项将在不同会话之间同步。</p>
 
                     <div class="form-group option-item">
-                        <label for="theme" class="bmd-label-floating"> Theme (only supported in modern browsers)</label>
+                        <label for="theme" class="bmd-label-floating"> 主题（仅支持现代浏览器）</label>
                         <select class="form-control" option="theme" id="theme">
-                                <option value="classic">Classic</option>
-                                <option value="dark">Dark</option>
-                                <option value="geocities">GeoCities</option>
+                                <option value="classic">经典</option>
+                                <option value="dark">暗黑</option>
+                                <option value="geocities">地理城</option>
                                 <option value="solarizedDark">Solarized Dark</option>
                                 <option value="solarizedLight">Solarized Light</option>
                             </select>
                     </div>
 
                     <div class="form-group option-item">
-                        <label for="preserveCR" class="bmd-label-floating"> Preserve carriage returns (0x0d)</label>
+                        <label for="preserveCR" class="bmd-label-floating"> 保留回车键 (0x0d)</label>
                         <select class="form-control" option="preserveCR" id="preserveCR" data-toggle="tooltip" data-placement="bottom" data-offset="-10%" data-html="true" title="HTML textareas don't support carriage returns, so if we want to preserve them in our input, we have to disable editing.<br><br>The default option is to only do this for high-entropy inputs, but you can force the choice using this dropdown.">
-                                <option value="entropy">For high-entropy inputs</option>
-                                <option value="always">Always</option>
-                                <option value="never">Never</option>
+                                <option value="entropy">对于高熵的输入</option>
+                                <option value="always">总是</option>
+                                <option value="never">从不</option>
                             </select>
                     </div>
 
                     <div class="form-group option-item">
-                        <label for="errorTimeout" class="bmd-label-floating">Operation error timeout in ms (0 for never)</label>
+                        <label for="errorTimeout" class="bmd-label-floating">超时错误时间，以毫秒为单位（0表示从不）</label>
                         <input type="number" class="form-control" option="errorTimeout" id="errorTimeout">
                     </div>
 
                     <div class="form-group option-item">
-                        <label for="ioDisplayThreshold" class="bmd-label-floating">Size threshold for treating the input and output as a file (KiB)</label>
+                        <label for="ioDisplayThreshold" class="bmd-label-floating">文件输入和文件输出的大小阈值（KiB）</label>
                         <input type="number" class="form-control" option="ioDisplayThreshold" id="ioDisplayThreshold">
                     </div>
 
                     <div class="form-group option-item">
-                        <label for="logLevel" class="bmd-label-floating">Console logging level</label>
+                        <label for="logLevel" class="bmd-label-floating">控制台日志级别</label>
                         <select class="form-control" option="logLevel" id="logLevel">
                                 <option value="silent">Silent</option>
                                 <option value="error">Error</option>
@@ -527,69 +527,69 @@
                     <div class="checkbox option-item">
                         <label for="updateUrl">
                                 <input type="checkbox" option="updateUrl" id="updateUrl" checked>
-                                Update the URL when the input or recipe changes
+                                当输入或配方改变时，更新URL
                             </label>
                     </div>
 
                     <div class="checkbox option-item">
                         <label for="showHighlighter">
                                 <input type="checkbox" option="showHighlighter" id="showHighlighter" checked>
-                                Highlight selected bytes in output and input (when possible)
+                                在输出和输入中突出所选的字节（尽可能）
                             </label>
                     </div>
 
                     <div class="checkbox option-item">
                         <label for="treatAsUtf8">
                                 <input type="checkbox" option="treatAsUtf8" id="treatAsUtf8" checked>
-                                Treat output as UTF-8 if possible
+                                如果可能的话，将输出视为UTF-8
                             </label>
                     </div>
 
                     <div class="checkbox option-item">
                         <label for="wordWrap">
                                 <input type="checkbox" option="wordWrap" id="wordWrap" checked>
-                                Word wrap the input and output
+                                输入输出文字自动换行
                             </label>
                     </div>
 
                     <div class="checkbox option-item">
                         <label for="showErrors">
                                 <input type="checkbox" option="showErrors" id="showErrors" checked>
-                                Operation error reporting (recommended)
+                                操作错误报告（推荐）
                             </label>
                     </div>
 
                     <div class="checkbox option-item">
                         <label for="useMetaKey">
                                 <input type="checkbox" option="useMetaKey" id="useMetaKey">
-                                Use meta key for keybindings (Windows ⊞/Command ⌘)
+                                使用元键进行按键绑定 (Windows ⊞/Command ⌘)
                             </label>
                     </div>
 
                     <div class="checkbox option-item">
                         <label for="autoMagic">
                                 <input type="checkbox" option="autoMagic" id="autoMagic">
-                                Attempt to detect encoded data automagically
+                                尝试自动检测编码数据
                             </label>
                     </div>
 
                     <div class="checkbox option-item">
                         <label for="imagePreview">
                                 <input type="checkbox" option="imagePreview" id="imagePreview">
-                                Render a preview of the input if it's detected to be an image
+                                如果检测到输入是一个图像，则渲染一个预览
                             </label>
                     </div>
 
                     <div class="checkbox option-item">
                         <label for="syncTabs">
                                 <input type="checkbox" option="syncTabs" id="syncTabs">
-                                Keep the current tab in sync between the input and output
+                                在输入和输出之间保持当前标签的同步性
                             </label>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" id="reset-options">Reset options to default</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" id="reset-options">重置为默认值</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
                 </div>
             </div>
         </div>
@@ -599,13 +599,13 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Edit Favourites</h5>
+                    <h5 class="modal-title">编辑收藏</h5>
                 </div>
                 <div class="modal-body" id="favourites-body">
                     <ul>
-                        <li><span style="font-weight: bold">To add:</span> drag the operation over the favourites category</li>
-                        <li><span style="font-weight: bold">To reorder:</span> drag up and down in the list below</li>
-                        <li><span style="font-weight: bold">To remove:</span> hit the red cross or drag out of the list below</li>
+                        <li><span style="font-weight: bold">添加：</span> 将操作拖到“收藏”类别上</li>
+                        <li><span style="font-weight: bold">排序：</span> 在下面的列表中拖动项目</li>
+                        <li><span style="font-weight: bold">移除：</span> 点击红叉或从以下列表中拖出</li>
                     </ul>
                     <br>
                     <ul id="edit-favourites-list" class="op-list"></ul>
@@ -613,9 +613,9 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="reset-favourites">Reset favourites to default</button>
-                    <button type="button" class="btn btn-success" data-dismiss="modal" id="save-favourites">Save</button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" id="reset-favourites">重置收藏</button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal" id="save-favourites">保存</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">取消</button>
                 </div>
             </div>
         </div>
@@ -625,7 +625,7 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">CyberChef - The Cyber Swiss Army Knife</h5>
+                    <h5 class="modal-title">赛博厨师 - 网络瑞士军刀</h5>
                 </div>
                 <div class="modal-body">
                     <img aria-hidden="true" class="about-img-left" src="<%- require('../static/images/cyberchef-128x128.png') %>" alt="CyberChef Logo" />
@@ -648,17 +648,17 @@
                         </li>
                         <li class="nav-item" role="presentation">
                             <a class="nav-link" href="#report-bug" aria-controls="messages" role="tab" data-toggle="tab">
-                                    Report a bug
+                                    报告 BUG
                                 </a>
                         </li>
                         <li class="nav-item" role="presentation">
                             <a class="nav-link" href="#about" aria-controls="messages" role="tab" data-toggle="tab">
-                                    About
+                                    关于
                                 </a>
                         </li>
                         <li class="nav-item" role="presentation">
                             <a class="nav-link" href="#keybindings" aria-controls="messages" role="tab" data-toggle="tab">
-                                    Keybindings
+                                    快捷键
                                 </a>
                         </li>
                     </ul>
@@ -755,7 +755,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
                 </div>
                 <a href="https://github.com/gchq/CyberChef">
                         <img aria-hidden="true" style="position: absolute; top: 0; right: 0; border: 0;" src="<%- require('../static/images/fork_me.png') %>" alt="Fork me on GitHub">
@@ -773,10 +773,10 @@
                 <div class="modal-body" id="confirm-body"></div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-success" id="confirm-yes">
-                            Yes
+                            是
                         </button>
                     <button type="button" class="btn btn-danger" id="confirm-no" data-dismiss="modal">
-                            No
+                            否
                         </button>
                 </div>
             </div>
@@ -787,28 +787,28 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Find Input Tab</h5>
+                    <h5 class="modal-title">寻找输出标签页</h5>
                 </div>
                 <div class="modal-body" id="input-tab-body">
-                    <h6>Load Status</h6>
+                    <h6>加载状态</h6>
                     <div id="input-find-options">
                         <ul id="input-find-options-checkboxes">
                             <li class="checkbox input-find-option">
                                 <label for="input-show-pending">
                                         <input type="checkbox" id="input-show-pending" checked="">
-                                        Pending
+                                        等待中
                                     </label>
                             </li>
                             <li class="checkbox input-find-option">
                                 <label for="input-show-loading">
                                         <input type="checkbox" id="input-show-loading" checked="">
-                                        Loading
+                                        加载中
                                     </label>
                             </li>
                             <li class="checkbox input-find-option">
                                 <label for="input-show-loaded">
                                         <input type="checkbox" id="input-show-loaded" checked="">
-                                        Loaded
+                                        已加载
                                     </label>
                             </li>
                         </ul>
@@ -835,8 +835,8 @@
                     <ul id="input-search-results"></ul>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="input-filter-refresh">Refresh</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="input-filter-refresh">刷新</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
                 </div>
             </div>
         </div>
@@ -846,40 +846,40 @@
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Find Output Tab</h5>
+                    <h5 class="modal-title">寻找输出标签页</h5>
                 </div>
                 <div class="modal-body" id="output-tab-body">
-                    <h6>Bake Status</h6>
+                    <h6>执行状态</h6>
                     <div id="output-find-options">
                         <ul id="output-find-options-checkboxes">
                             <li class="checkbox output-find-option">
                                 <label for="output-show-pending">
                                         <input type="checkbox" id="output-show-pending" checked="">
-                                        Pending
+                                        等待中
                                     </label>
                             </li>
                             <li class="checkbox output-find-option">
                                 <label for="output-show-baking">
                                         <input type="checkbox" id="output-show-baking" checked="">
-                                        Baking
+                                        执行中
                                     </label>
                             </li>
                             <li class="checkbox output-find-option">
                                 <label for="output-show-baked">
                                         <input type="checkbox" id="output-show-baked" checked="">
-                                        Baked
+                                        已完成
                                     </label>
                             </li>
                             <li class="checkbox output-find-option">
                                 <label for="output-show-stale">
                                         <input type="checkbox" id="output-show-stale" checked="">
-                                        Stale
+                                        过时
                                     </label>
                             </li>
                             <li class="checkbox output-find-option">
                                 <label for="output-show-errored">
                                         <input type="checkbox" id="output-show-errored" checked="">
-                                        Errored
+                                        错误
                                     </label>
                             </li>
                         </ul>
@@ -897,8 +897,8 @@
                     <ul id="output-search-results"></ul>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="output-filter-refresh">Refresh</button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" id="output-filter-refresh">刷新</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
                 </div>
             </div>
         </div>
