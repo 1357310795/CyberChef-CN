@@ -20,17 +20,19 @@ class FromBase62 extends Operation {
     constructor() {
         super();
 
-        this.name = "Base62 转文本";
+        this.name = "From Base62";
         this.module = "Default";
         this.description = "Base62 is a notation for encoding arbitrary byte data using a restricted set of symbols that can be conveniently used by humans and processed by computers. The high number base results in shorter strings than with the decimal or hexadecimal system.";
         this.infoURL = "https://wikipedia.org/wiki/List_of_numeral_systems";
         this.inputType = "string";
         this.outputType = "byteArray";
-        this.args = [{
-            name: "Alphabet",
-            type: "string",
-            value: "0-9A-Za-z"
-        }];
+        this.args = [
+            {
+                name: "Alphabet",
+                type: "string",
+                value: "0-9A-Za-z"
+            }
+        ];
     }
 
     /**

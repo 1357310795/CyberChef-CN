@@ -18,13 +18,14 @@ class FromBase32 extends Operation {
     constructor() {
         super();
 
-        this.name = "Base32 转文本";
+        this.name = "From Base32";
         this.module = "Default";
         this.description = "Base32 is a notation for encoding arbitrary byte data using a restricted set of symbols that can be conveniently used by humans and processed by computers. It uses a smaller set of characters than Base64, usually the uppercase alphabet and the numbers 2 to 7.";
         this.infoURL = "https://wikipedia.org/wiki/Base32";
         this.inputType = "string";
         this.outputType = "byteArray";
-        this.args = [{
+        this.args = [
+            {
                 name: "Alphabet",
                 type: "binaryString",
                 value: "A-Z2-7="
@@ -35,11 +36,13 @@ class FromBase32 extends Operation {
                 value: true
             }
         ];
-        this.checks = [{
-            pattern: "^(?:[A-Z2-7]{8})+(?:[A-Z2-7]{2}={6}|[A-Z2-7]{4}={4}|[A-Z2-7]{5}={3}|[A-Z2-7]{7}={1})?$",
-            flags: "",
-            args: ["A-Z2-7=", false]
-        }];
+        this.checks = [
+            {
+                pattern: "^(?:[A-Z2-7]{8})+(?:[A-Z2-7]{2}={6}|[A-Z2-7]{4}={4}|[A-Z2-7]{5}={3}|[A-Z2-7]{7}={1})?$",
+                flags: "",
+                args: ["A-Z2-7=", false]
+            }
+        ];
     }
 
     /**
@@ -51,7 +54,7 @@ class FromBase32 extends Operation {
         if (!input) return [];
 
         const alphabet = args[0] ?
-            Utils.expandAlphRange(args[0]).join("") : "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567=",
+                Utils.expandAlphRange(args[0]).join("") : "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567=",
             removeNonAlphChars = args[1],
             output = [];
 

@@ -5,7 +5,7 @@
  */
 
 import Operation from "../Operation.mjs";
-import { fromBase64, ALPHABET_OPTIONS } from "../lib/Base64.mjs";
+import {fromBase64, ALPHABET_OPTIONS} from "../lib/Base64.mjs";
 
 /**
  * From Base64 operation
@@ -18,13 +18,14 @@ class FromBase64 extends Operation {
     constructor() {
         super();
 
-        this.name = "Base64 转文本";
+        this.name = "From Base64";
         this.module = "Default";
         this.description = "Base64 is a notation for encoding arbitrary byte data using a restricted set of symbols that can be conveniently used by humans and processed by computers.<br><br>This operation decodes data from an ASCII Base64 string back into its raw format.<br><br>e.g. <code>aGVsbG8=</code> becomes <code>hello</code>";
         this.infoURL = "https://wikipedia.org/wiki/Base64";
         this.inputType = "string";
         this.outputType = "byteArray";
-        this.args = [{
+        this.args = [
+            {
                 name: "Alphabet",
                 type: "editableOption",
                 value: ALPHABET_OPTIONS
@@ -40,7 +41,8 @@ class FromBase64 extends Operation {
                 value: false
             }
         ];
-        this.checks = [{
+        this.checks = [
+            {
                 pattern: "^\\s*(?:[A-Z\\d+/]{4})+(?:[A-Z\\d+/]{2}==|[A-Z\\d+/]{3}=)?\\s*$",
                 flags: "i",
                 args: ["A-Za-z0-9+/=", true, false]
