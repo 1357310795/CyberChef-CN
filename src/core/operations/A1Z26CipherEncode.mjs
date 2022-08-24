@@ -19,7 +19,7 @@ class A1Z26CipherEncode extends Operation {
     constructor() {
         super();
 
-        this.name = "A1Z26 Cipher Encode";
+        this.name = "A1Z26 Cipher 编码";
         this.module = "Ciphers";
         this.description = "Converts alphabet characters into their corresponding alphabet order number.<br><br>e.g. <code>a</code> becomes <code>1</code> and <code>b</code> becomes <code>2</code>.<br><br>Non-alphabet characters are dropped.";
         this.infoURL = "";
