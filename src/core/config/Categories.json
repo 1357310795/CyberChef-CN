@@ -6,10 +6,10 @@
     {
         "name": "Data format",
         "ops": [
-            "To Hexdump",
-            "From Hexdump",
-            "To Hex",
-            "From Hex",
+            "转换为十六进制转储",
+            "从十六进制转储转换",
+            "转换为十六进制编码",
+            "从十六进制编码转换",
             "To Charcode",
             "From Charcode",
             "To Decimal",

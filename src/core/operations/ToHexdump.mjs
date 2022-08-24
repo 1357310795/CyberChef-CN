@@ -19,7 +19,7 @@ class ToHexdump extends Operation {
     constructor() {
         super();
 
-        this.name = "To Hexdump";
+        this.name = "转换为十六进制转储";
         this.module = "Default";
         this.description = "Creates a hexdump of the input data, displaying both the hexadecimal values of each byte and an ASCII representation alongside.<br><br>The 'UNIX format' argument defines which subset of printable characters are displayed in the preview column.";
         this.infoURL = "https://wikipedia.org/wiki/Hex_dump";
