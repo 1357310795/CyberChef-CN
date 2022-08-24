@@ -138,7 +138,7 @@ TestRegister.addTests([
         expectedOutput: "Error: all numbers must be between 1 and 26.",
         recipeConfig: [
             {
-                op: "A1Z26 Cipher Decode",
+                op: "A1Z26 Cipher 解码",
                 args: ["Space"]
             }
         ],
