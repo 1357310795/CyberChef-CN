@@ -193,19 +193,19 @@
                     <div id="controls" class="no-select hide-on-maximised-output">
                         <div id="controls-content" class="d-flex align-items-center">
                             <button type="button" class="mx-2 btn btn-lg btn-secondary" id="step" data-toggle="tooltip" title="Step through the recipe">
-                                Step
+                                步骤
                             </button>
 
                             <button type="button" class="mx-2 btn btn-lg btn-success btn-raised btn-block" id="bake">
                                 <img aria-hidden="true" src="<%- require('../static/images/cook_male-32x32.png') %>" alt="Chef Icon"/>
-                                <span>Bake!</span>
+                                <span>制作!</span>
                             </button>
 
                             <div class="form-group" style="display: contents;">
                                 <div class="mx-1 checkbox">
                                     <label id="auto-bake-label">
                                         <input type="checkbox" checked="checked" id="auto-bake">
-                                        <br>Auto Bake
+                                        <br>自动制作
                                     </label>
                                 </div>
                             </div>
@@ -216,7 +216,7 @@
                 <div class="split split-horizontal" id="IO">
                     <div id="input" class="split no-select">
                         <div class="title no-select">
-                            <label for="input-text">Input</label>
+                            <label for="input-text">输入</label>
                             <span class="pane-controls">
                                 <div class="io-info" id="input-files-info"></div>
                                 <div class="io-info" id="input-selection-info"></div>
@@ -288,7 +288,7 @@
 
                     <div id="output" class="split">
                         <div class="title no-select">
-                            <label for="output-text">Output</label>
+                            <label for="output-text">输出</label>
                             <span class="pane-controls">
                                 <div class="io-info" id="bake-info"></div>
                                 <div class="io-info" id="output-selection-info"></div>
@@ -459,7 +459,7 @@
                             <span class="bmd-help">Load your recipe from local storage by selecting its name from the drop-down</span>
                         </div>
                         <div class="form-group">
-                            <label for="load-text" class="bmd-label-floating">Recipe</label>
+                            <label for="load-text" class="bmd-label-floating">配方</label>
                             <textarea class="form-control" id="load-text" rows="5"></textarea>
                             <span class="bmd-help">Load your recipe by pasting it into this box</span>
                         </div>
