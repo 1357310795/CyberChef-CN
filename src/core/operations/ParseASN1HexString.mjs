@@ -18,7 +18,7 @@ class ParseASN1HexString extends Operation {
     constructor() {
         super();
 
-        this.name = "Parse ASN.1 hex string";
+        this.name = "解析 ASN.1 十六进制字符串";
         this.module = "PublicKey";
         this.description = "Abstract Syntax Notation One (ASN.1) is a standard and notation that describes rules and structures for representing, encoding, transmitting, and decoding data in telecommunications and computer networking.<br><br>This operation parses arbitrary ASN.1 data and presents the resulting tree.";
         this.infoURL = "https://wikipedia.org/wiki/Abstract_Syntax_Notation_One";

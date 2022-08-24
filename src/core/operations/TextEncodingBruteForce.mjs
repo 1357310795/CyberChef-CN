@@ -21,7 +21,7 @@ class TextEncodingBruteForce extends Operation {
     constructor() {
         super();
 
-        this.name = "Text Encoding Brute Force";
+        this.name = "暴力查询文本编码";
         this.module = "Encodings";
         this.description = [
             "Enumerates all supported text encodings for the input, allowing you to quickly spot the correct one.",

@@ -20,7 +20,7 @@ class NormaliseUnicode extends Operation {
     constructor() {
         super();
 
-        this.name = "Normalise Unicode";
+        this.name = "规范化 Unicode";
         this.module = "Encodings";
         this.description = "Transform Unicode characters to one of the Normalisation Forms";
         this.infoURL = "https://wikipedia.org/wiki/Unicode_equivalence#Normal_forms";

@@ -18,7 +18,7 @@ class ToBraille extends Operation {
     constructor() {
         super();
 
-        this.name = "To Braille";
+        this.name = "文本转布莱叶盲文";
         this.module = "Default";
         this.description = "Converts text to six-dot braille symbols.";
         this.infoURL = "https://wikipedia.org/wiki/Braille";

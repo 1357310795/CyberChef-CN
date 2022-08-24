@@ -19,7 +19,7 @@ class FromMessagePack extends Operation {
     constructor() {
         super();
 
-        this.name = "From MessagePack";
+        this.name = "MessagePack 转 Json";
         this.module = "Code";
         this.description = "Converts MessagePack encoded data to JSON. MessagePack is a computer data interchange format. It is a binary form for representing simple data structures like arrays and associative arrays.";
         this.infoURL = "https://wikipedia.org/wiki/MessagePack";

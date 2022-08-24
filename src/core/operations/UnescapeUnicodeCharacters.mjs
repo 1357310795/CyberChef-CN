@@ -18,7 +18,7 @@ class UnescapeUnicodeCharacters extends Operation {
     constructor() {
         super();
 
-        this.name = "Unescape Unicode Characters";
+        this.name = "Unicode 编码转文本";
         this.module = "Default";
         this.description = "Converts unicode-escaped character notation back into raw characters.<br><br>Supports the prefixes:<ul><li><code>\\u</code></li><li><code>%u</code></li><li><code>U+</code></li></ul>e.g. <code>\\u03c3\\u03bf\\u03c5</code> becomes <code>σου</code>";
         this.inputType = "string";

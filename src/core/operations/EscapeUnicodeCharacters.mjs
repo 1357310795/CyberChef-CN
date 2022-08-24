@@ -17,7 +17,7 @@ class EscapeUnicodeCharacters extends Operation {
     constructor() {
         super();
 
-        this.name = "Escape Unicode Characters";
+        this.name = "文本转 Unicode 编码";
         this.module = "Default";
         this.description = "Converts characters to their unicode-escaped notations.<br><br>Supports the prefixes:<ul><li><code>\\u</code></li><li><code>%u</code></li><li><code>U+</code></li></ul>e.g. <code>σου</code> becomes <code>\\u03C3\\u03BF\\u03C5</code>";
         this.inputType = "string";

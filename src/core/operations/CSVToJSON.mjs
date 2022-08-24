@@ -19,7 +19,7 @@ class CSVToJSON extends Operation {
     constructor() {
         super();
 
-        this.name = "CSV to JSON";
+        this.name = "CSV 转 JSON";
         this.module = "Default";
         this.description = "Converts a CSV file to JSON format.";
         this.infoURL = "https://wikipedia.org/wiki/Comma-separated_values";

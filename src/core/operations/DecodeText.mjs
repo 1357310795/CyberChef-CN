@@ -19,7 +19,7 @@ class DecodeText extends Operation {
     constructor() {
         super();
 
-        this.name = "Decode text";
+        this.name = "文本解码";
         this.module = "Encodings";
         this.description = [
             "Decodes text from the chosen character encoding.",

@@ -20,7 +20,7 @@ class JSONToCSV extends Operation {
     constructor() {
         super();
 
-        this.name = "JSON to CSV";
+        this.name = "JSON 转 CSV";
         this.module = "Default";
         this.description = "Converts JSON data to a CSV based on the definition in RFC 4180.";
         this.infoURL = "https://wikipedia.org/wiki/Comma-separated_values";
