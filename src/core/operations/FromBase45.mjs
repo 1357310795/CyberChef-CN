@@ -21,7 +21,7 @@ class FromBase45 extends Operation {
     constructor() {
         super();
 
-        this.name = "From Base45";
+        this.name = "Base45 转文本";
         this.module = "Default";
         this.description = "Base45 is a notation for encoding arbitrary byte data using a restricted set of symbols that can be conveniently used by humans and processed by computers. The high number base results in shorter strings than with the decimal or hexadecimal system. Base45 is optimized for usage with QR codes.";
         this.infoURL = "https://wikipedia.org/wiki/List_of_numeral_systems";

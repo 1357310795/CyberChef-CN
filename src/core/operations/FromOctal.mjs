@@ -19,7 +19,7 @@ class FromOctal extends Operation {
     constructor() {
         super();
 
-        this.name = "From Octal";
+        this.name = "八进制转文本";
         this.module = "Default";
         this.description = "Converts an octal byte string back into its raw value.<br><br>e.g. <code>316 223 316 265 316 271 316 254 40 317 203 316 277 317 205</code> becomes the UTF-8 encoded string <code>Γειά σου</code>";
         this.infoURL = "https://wikipedia.org/wiki/Octal";
