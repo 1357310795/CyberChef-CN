@@ -17,7 +17,7 @@ module.exports = {
     },
 
     "Sanity check operations": async browser => {
-        const Images = await import("../samples/Images.mjs");
+        // const Images = await import("../samples/Images.mjs");
         // testOp(browser, "A1Z26 Cipher Decode", "20 5 19 20 15 21 20 16 21 20", "testoutput");
         // testOp(browser, "A1Z26 Cipher Encode", "test input", "20 5 19 20 9 14 16 21 20");
         // testOp(browser, "ADD", "test input", "Ê»ÉÊv¿ÄÆËÊ", [{ "option": "Hex", "string": "56" }]);
@@ -439,16 +439,16 @@ function bakeOp(browser, opName, input, args=[]) {
  * @param {string} output - expected output
  * @param {Array<string>|Array<Array<string>>} args - arguments, nested if multiple ops
  */
-function testOp(browser, opName, input, output, args=[]) {
+// function testOp(browser, opName, input, output, args=[]) {
 
-    bakeOp(browser, opName, input, args);
+//     bakeOp(browser, opName, input, args);
 
-    if (typeof output === "string") {
-        browser.expect.element("#output-text").to.have.property("value").that.equals(output);
-    } else if (output instanceof RegExp) {
-        browser.expect.element("#output-text").to.have.property("value").that.matches(output);
-    }
-}
+//     if (typeof output === "string") {
+//         browser.expect.element("#output-text").to.have.property("value").that.equals(output);
+//     } else if (output instanceof RegExp) {
+//         browser.expect.element("#output-text").to.have.property("value").that.matches(output);
+//     }
+// }
 
 /** @function
  * Clears the current recipe and tests a new operation.
@@ -460,12 +460,12 @@ function testOp(browser, opName, input, output, args=[]) {
  * @param {string} output - expected output
  * @param {Array<string>|Array<Array<string>>} args - arguments, nested if multiple ops
  */
-function testOpHtml(browser, opName, input, cssSelector, output, args=[]) {
-    bakeOp(browser, opName, input, args);
+// function testOpHtml(browser, opName, input, cssSelector, output, args=[]) {
+//     bakeOp(browser, opName, input, args);
 
-    if (typeof output === "string") {
-        browser.expect.element("#output-html " + cssSelector).text.that.equals(output);
-    } else if (output instanceof RegExp) {
-        browser.expect.element("#output-html " + cssSelector).text.that.matches(output);
-    }
-}
+//     if (typeof output === "string") {
+//         browser.expect.element("#output-html " + cssSelector).text.that.equals(output);
+//     } else if (output instanceof RegExp) {
+//         browser.expect.element("#output-html " + cssSelector).text.that.matches(output);
+//     }
+// }
