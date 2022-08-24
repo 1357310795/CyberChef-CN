@@ -18,7 +18,7 @@ class ToBase extends Operation {
     constructor() {
         super();
 
-        this.name = "To Base";
+        this.name = "十进制转 x 进制";
         this.module = "Default";
         this.description = "Converts a decimal number to a given numerical base.";
         this.infoURL = "https://wikipedia.org/wiki/Radix";

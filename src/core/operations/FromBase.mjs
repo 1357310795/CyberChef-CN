@@ -19,7 +19,7 @@ class FromBase extends Operation {
     constructor() {
         super();
 
-        this.name = "From Base";
+        this.name = "x 进制转十进制";
         this.module = "Default";
         this.description = "Converts a number to decimal from a given numerical base.";
         this.infoURL = "https://wikipedia.org/wiki/Radix";
