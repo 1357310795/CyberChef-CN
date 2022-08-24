@@ -20,7 +20,7 @@ class A1Z26CipherDecode extends Operation {
     constructor() {
         super();
 
-        this.name = "A1Z26 Cipher 解码";
+        this.name = "A1Z26 Cipher Decode";
         this.module = "Ciphers";
         this.description = "将字母顺序的数字转换为其对应的字母字符。<br><br>例如：<code>1</code> 转换为 <code>a</code> ； <code>2</code> 转换为 <code>b</code>.";
         this.infoURL = "";
