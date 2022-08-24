@@ -384,51 +384,51 @@ module.exports = {
  * @param {string} input - input text for test
  * @param {Array<string>|Array<Array<string>>} args - aarguments, nested if multiple ops
  */
-function bakeOp(browser, opName, input, args=[]) {
-    let recipeConfig;
+// function bakeOp(browser, opName, input, args=[]) {
+//     let recipeConfig;
 
-    if (typeof(opName) === "string") {
-        recipeConfig = JSON.stringify([{
-            "op": opName,
-            "args": args
-        }]);
-    } else if (opName instanceof Array) {
-        recipeConfig = JSON.stringify(
-            opName.map((op, i) => {
-                return {
-                    op: op,
-                    args: args.length ? args[i] : []
-                };
-            })
-        );
-    } else {
-        throw new Error("Invalid operation type. Must be string or array of strings. Received: " + typeof(opName));
-    }
+//     if (typeof(opName) === "string") {
+//         recipeConfig = JSON.stringify([{
+//             "op": opName,
+//             "args": args
+//         }]);
+//     } else if (opName instanceof Array) {
+//         recipeConfig = JSON.stringify(
+//             opName.map((op, i) => {
+//                 return {
+//                     op: op,
+//                     args: args.length ? args[i] : []
+//                 };
+//             })
+//         );
+//     } else {
+//         throw new Error("Invalid operation type. Must be string or array of strings. Received: " + typeof(opName));
+//     }
 
-    browser
-        .useCss()
-        .click("#clr-recipe")
-        .click("#clr-io")
-        .waitForElementNotPresent("#rec-list li.operation")
-        .expect.element("#input-text").to.have.property("value").that.equals("");
+//     browser
+//         .useCss()
+//         .click("#clr-recipe")
+//         .click("#clr-io")
+//         .waitForElementNotPresent("#rec-list li.operation")
+//         .expect.element("#input-text").to.have.property("value").that.equals("");
 
-    browser
-        .perform(function() {
-            console.log(`Current test: ${opName}`);
-        })
-        .urlHash("recipe=" + recipeConfig)
-        .setValue("#input-text", input)
-        .waitForElementPresent("#rec-list li.operation")
-        .expect.element("#input-text").to.have.property("value").that.equals(input);
+//     browser
+//         .perform(function() {
+//             console.log(`Current test: ${opName}`);
+//         })
+//         .urlHash("recipe=" + recipeConfig)
+//         .setValue("#input-text", input)
+//         .waitForElementPresent("#rec-list li.operation")
+//         .expect.element("#input-text").to.have.property("value").that.equals(input);
 
-    browser
-        .waitForElementVisible("#stale-indicator", 5000)
-        .pause(100)
-        .click("#bake")
-        .pause(100)
-        .waitForElementPresent("#stale-indicator.hidden", 5000)
-        .waitForElementNotVisible("#output-loader", 5000);
-}
+//     browser
+//         .waitForElementVisible("#stale-indicator", 5000)
+//         .pause(100)
+//         .click("#bake")
+//         .pause(100)
+//         .waitForElementPresent("#stale-indicator.hidden", 5000)
+//         .waitForElementNotVisible("#output-loader", 5000);
+// }
 
 /** @function
  * Clears the current recipe and tests a new operation.
