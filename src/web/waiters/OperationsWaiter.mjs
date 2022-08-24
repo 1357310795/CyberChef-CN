@@ -226,7 +226,7 @@ class OperationsWaiter {
 
         // Add favourites to modal
         const favCat = this.app.categories.filter(function(c) {
-            return c.name === "Favourites";
+            return c.name === "收藏";
         })[0];
 
         let html = "";
