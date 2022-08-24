@@ -462,7 +462,7 @@
         ]
     },
     {
-        "name": 其他",
+        "name": "其他",
         "ops": [
             "Entropy",
             "Frequency distribution",
