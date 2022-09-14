@@ -17,7 +17,7 @@ class ROT47BruteForce extends Operation {
     constructor() {
         super();
 
-        this.name = "ROT47 Brute Force";
+        this.name = "ROT47 爆破";
         this.module = "Default";
         this.description = "Try all meaningful amounts for ROT47.<br><br>Optionally you can enter your known plaintext (crib) to filter the result.";
         this.infoURL = "https://wikipedia.org/wiki/ROT13#Variants";

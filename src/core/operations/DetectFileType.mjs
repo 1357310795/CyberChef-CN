@@ -26,7 +26,7 @@ class DetectFileType extends Operation {
     constructor() {
         super();
 
-        this.name = "Detect File Type";
+        this.name = "检测文件类型";
         this.module = "Default";
         this.description = "Attempts to guess the MIME (Multipurpose Internet Mail Extensions) type of the data based on 'magic bytes'.<br><br>Currently supports the following file types: " +
             exts + ".";

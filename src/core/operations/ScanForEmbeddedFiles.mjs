@@ -20,7 +20,7 @@ class ScanForEmbeddedFiles extends Operation {
     constructor() {
         super();
 
-        this.name = "Scan for Embedded Files";
+        this.name = "扫描嵌入文件";
         this.module = "Default";
         this.description = "Scans the data for potential embedded files by looking for magic bytes at all offsets. This operation is prone to false positives.<br><br>WARNING: Files over about 100KB in size will take a VERY long time to process.";
         this.infoURL = "https://wikipedia.org/wiki/List_of_file_signatures";

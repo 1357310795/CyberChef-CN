@@ -31,7 +31,7 @@ class ExtractFiles extends Operation {
         // Flatten categories and remove duplicates
         supportedExts = [].concat(...supportedExts).unique();
 
-        this.name = "Extract Files";
+        this.name = "提取文件";
         this.module = "Default";
         this.description = `Performs file carving to attempt to extract files from the input.<br><br>This operation is currently capable of carving out the following formats:
             <ul>

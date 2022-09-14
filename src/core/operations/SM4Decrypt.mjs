@@ -21,7 +21,7 @@ class SM4Decrypt extends Operation {
     constructor() {
         super();
 
-        this.name = "SM4 Decrypt";
+        this.name = "SM4 解密";
         this.module = "Ciphers";
         this.description = "SM4 is a 128-bit block cipher, currently established as a national standard (GB/T 32907-2016) of China.";
         this.infoURL = "https://wikipedia.org/wiki/SM4_(cipher)";
