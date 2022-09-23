@@ -20,7 +20,7 @@ class RSAVerify extends Operation {
     constructor() {
         super();
 
-        this.name = "RSA Verify";
+        this.name = "RSA 签名验证";
         this.module = "Ciphers";
         this.description = "Verify a message against a signature and a public PEM encoded RSA key.";
         this.infoURL = "https://wikipedia.org/wiki/RSA_(cryptosystem)";

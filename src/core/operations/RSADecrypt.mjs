@@ -20,7 +20,7 @@ class RSADecrypt extends Operation {
     constructor() {
         super();
 
-        this.name = "RSA Decrypt";
+        this.name = "RSA 解密";
         this.module = "Ciphers";
         this.description = "Decrypt an RSA encrypted message with a PEM encoded private key.";
         this.infoURL = "https://wikipedia.org/wiki/RSA_(cryptosystem)";

@@ -23,7 +23,7 @@ class PGPVerify extends Operation {
     constructor() {
         super();
 
-        this.name = "PGP Verify";
+        this.name = "PGP 签名验证";
         this.module = "PGP";
         this.description = [
             "Input: the ASCII-armoured encrypted PGP message you want to verify.",

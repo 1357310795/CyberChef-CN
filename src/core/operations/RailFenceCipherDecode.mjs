@@ -18,7 +18,7 @@ class RailFenceCipherDecode extends Operation {
     constructor() {
         super();
 
-        this.name = "Rail Fence Cipher Decode";
+        this.name = "W 型栅栏解密";
         this.module = "Ciphers";
         this.description = "Decodes Strings that were created using the Rail fence Cipher provided a key and an offset";
         this.infoURL = "https://wikipedia.org/wiki/Rail_fence_cipher";

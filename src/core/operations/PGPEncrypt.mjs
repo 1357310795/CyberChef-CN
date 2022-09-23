@@ -22,7 +22,7 @@ class PGPEncrypt extends Operation {
     constructor() {
         super();
 
-        this.name = "PGP Encrypt";
+        this.name = "PGP 加密";
         this.module = "PGP";
         this.description = [
             "Input: the message you want to encrypt.",

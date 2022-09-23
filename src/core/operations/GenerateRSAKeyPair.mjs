@@ -20,7 +20,7 @@ class GenerateRSAKeyPair extends Operation {
     constructor() {
         super();
 
-        this.name = "Generate RSA Key Pair";
+        this.name = "生成 RSA 密钥对";
         this.module = "Ciphers";
         this.description = `Generate an RSA key pair with a given number of bits.<br><br>${cryptNotice}`;
         this.infoURL = "https://wikipedia.org/wiki/RSA_(cryptosystem)";

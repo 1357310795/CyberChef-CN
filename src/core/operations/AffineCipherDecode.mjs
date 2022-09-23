@@ -19,7 +19,7 @@ class AffineCipherDecode extends Operation {
     constructor() {
         super();
 
-        this.name = "Affine Cipher Decode";
+        this.name = "仿射密码解密";
         this.module = "Ciphers";
         this.description = "The Affine cipher is a type of monoalphabetic substitution cipher. To decrypt, each letter in an alphabet is mapped to its numeric equivalent, decrypted by a mathematical function, and converted back to a letter.";
         this.infoURL = "https://wikipedia.org/wiki/Affine_cipher";

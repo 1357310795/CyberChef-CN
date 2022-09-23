@@ -18,7 +18,7 @@ class RailFenceCipherEncode extends Operation {
     constructor() {
         super();
 
-        this.name = "Rail Fence Cipher Encode";
+        this.name = "W 型栅栏加密";
         this.module = "Ciphers";
         this.description = "Encodes Strings using the Rail fence Cipher provided a key and an offset";
         this.infoURL = "https://wikipedia.org/wiki/Rail_fence_cipher";

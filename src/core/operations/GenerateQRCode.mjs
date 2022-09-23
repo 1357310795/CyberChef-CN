@@ -22,7 +22,7 @@ class GenerateQRCode extends Operation {
     constructor() {
         super();
 
-        this.name = "Generate QR Code";
+        this.name = "生成二维码(QR)";
         this.module = "Image";
         this.description = "Generates a Quick Response (QR) code from the input text.<br><br>A QR code is a type of matrix barcode (or two-dimensional barcode) first designed in 1994 for the automotive industry in Japan. A barcode is a machine-readable optical label that contains information about the item to which it is attached.";
         this.infoURL = "https://wikipedia.org/wiki/QR_code";

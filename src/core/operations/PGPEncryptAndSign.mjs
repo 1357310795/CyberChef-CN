@@ -22,7 +22,7 @@ class PGPEncryptAndSign extends Operation {
     constructor() {
         super();
 
-        this.name = "PGP Encrypt and Sign";
+        this.name = "PGP 加密并签名";
         this.module = "PGP";
         this.description = [
             "Input: the cleartext you want to sign.",

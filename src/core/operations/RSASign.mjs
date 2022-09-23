@@ -21,7 +21,7 @@ class RSASign extends Operation {
     constructor() {
         super();
 
-        this.name = "RSA Sign";
+        this.name = "RSA 签名";
         this.module = "Ciphers";
         this.description = "Sign a plaintext message with a PEM encoded RSA key.";
         this.infoURL = "https://wikipedia.org/wiki/RSA_(cryptosystem)";
