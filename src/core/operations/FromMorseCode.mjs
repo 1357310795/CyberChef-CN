@@ -19,7 +19,7 @@ class FromMorseCode extends Operation {
     constructor() {
         super();
 
-        this.name = "From Morse Code";
+        this.name = "摩斯电码转文本";
         this.module = "Default";
         this.description = "Translates Morse Code into (upper case) alphanumeric characters.";
         this.infoURL = "https://wikipedia.org/wiki/Morse_code";

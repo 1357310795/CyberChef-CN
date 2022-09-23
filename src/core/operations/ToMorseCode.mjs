@@ -19,7 +19,7 @@ class ToMorseCode extends Operation {
     constructor() {
         super();
 
-        this.name = "To Morse Code";
+        this.name = "文本转摩斯电码";
         this.module = "Default";
         this.description = "Translates alphanumeric characters into International Morse Code.<br><br>Ignores non-Morse characters.<br><br>e.g. <code>SOS</code> becomes <code>... --- ...</code>";
         this.infoURL = "https://wikipedia.org/wiki/Morse_code";
